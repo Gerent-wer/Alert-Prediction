@@ -1,0 +1,12 @@
+{
+  "base_url": "/",
+  "hostname": "0.0.0.0",
+  "notebook_dir": "/home/ubuntu",
+  "password": true,
+  "pid": 44386,
+  "port": 8888,
+  "secure": false,
+  "sock": "",
+  "token": "",
+  "url": "http://0.0.0.0:8888/"
+}
