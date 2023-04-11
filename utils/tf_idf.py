@@ -25,7 +25,7 @@ def extract_topn_from_vector(feature_names, sorted_items, topn=10):
 
 
 def convert_doc_to_vector(doc,tfidf,cv):
-    feature_names = cv.get_feature_names()
+    feature_names = cv.get_feature_names_out()
     top_n = 10
     tf_idf_vector = tfidf.transform(cv.transform([doc]))
     
