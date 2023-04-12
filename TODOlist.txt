@@ -1,1 +1,12 @@
-A list of TODO in order to improve your top model
+1. Dataset for training is still too big in university project purposes, if the we are considered to 
+train the model on our home devices.Wasted a lot of time waiting the model - but maybe it’s 
+the lesson for use be more careful when preparing the data before fitting it. I would also 
+suggest myself to review the features, size, way of merging.
+2. Review existing features, think about new ones
+3. Research for new models, which haven’t used yet
+4. In general,I suppose useful thing to do is to try supply ISW war reports with another type of 
+war articles/news.
+5. Review the whole code logic within the Alarm prediction project, especially on NLP and data 
+preprocessing part - in my opinion, for now it’s quite easy to make an transparent mistake
+6. How we can decrease the size of dataset and in the same way don’t lose the accuracy 
+significantly?
