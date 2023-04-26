@@ -71,7 +71,7 @@ def read_html(file):
     date = datetime.strptime(file_name[0],"%d_%m_%Y")
     url = file_name[1].split(".")[0]
     
-    with open(file,"r") as cfile:
+    with open(file,"r", encoding='utf8') as cfile:
         parsed_html = BeautifulSoup(cfile.read(),features="lxml")
         
         title = parsed_html.head.find("title").text
