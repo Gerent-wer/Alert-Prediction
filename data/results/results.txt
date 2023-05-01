@@ -1,4 +1,4 @@
-Крим	Вінниччина	Волинь	Дніпропетровщина	Донеччина	Житомирщина	Закарпаття	Запоріжжя	Івано-Франківщина	Київщина	Кіровоградщина	Луганщина	Львівщина	Миколаївщина	Одещина	Полтавщина	Рівненщина	Сумщина	Тернопільщина	Харківщина	Херсонщина	Хмельниччина	Черкащина	Буковина	Чернігівщина
+Vinnytsia	Simferopol	Lutsk	Dnipro	Donetsk	Zhytomyr	Uzhgorod	Zaporozhye	Ivano-Frankivsk	Kyiv	Kropyvnytskyi	Luhansk	Lviv	Mykolaiv	Odesa	Poltava	Rivne	Sumy	Ternopil	Kharkiv	Kherson	Khmelnytskyi	Cherkasy	Chernivtsi	Chernihiv
 0.0																								
 0.0																								
 0.0																								
