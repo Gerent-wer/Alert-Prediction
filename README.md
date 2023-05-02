@@ -35,14 +35,16 @@ The model must be able to adapt to changing conditions and accurately predict th
 
 3. SaaS implementation
 
-    * running Amazon EC2 server
-    * generating PostMan collections
+    * Running Amazon EC2 server
+    * Creating PostMan collections
 
 4. GIT 
 
-    * pushing, pulling, working on the same project with a team
+    * Pushing, pulling, working on the same project with a team
     
-    
+#### Endpoint
+
+Ready Python SaaS which is capable of generating probability of air alarm in all regions of Ukraine every hour for next 12 hours
     
     
     
