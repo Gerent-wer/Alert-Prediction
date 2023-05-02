@@ -218,3 +218,4 @@ def alarm_predict_endpoint():
     }
 
     return result
+
