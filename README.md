@@ -4,6 +4,10 @@
 
 Our team is consisted of Voitishyn Mykyta, Ivashenko Dima, Zubko Stanislav and Azhniuk Roman
 
+#### Endpoint
+
+Ready Python SaaS which is capable of generating probability of air alarm in all regions of Ukraine every hour for next 12 hours
+
 #### Why
 
 
@@ -26,7 +30,7 @@ The model must be able to adapt to changing conditions and accurately predict th
 
     * Natural language preprocessing
     * Exploratary data analysis
-    * Pandas manipulations( mostly with DataFrames)
+    * Pandas manipulations(чmostly with DataFrames)
     * Data Modeling
     * Machine lerning algorithms and predictions
     
@@ -42,10 +46,9 @@ The model must be able to adapt to changing conditions and accurately predict th
 
     * Pushing, pulling, working on the same project with a team
     
-#### Endpoint
+#### Project structure
 
-Ready Python SaaS which is capable of generating probability of air alarm in all regions of Ukraine every hour for next 12 hours
-    
+
     
     
 #### For any questions you can reash us via LinkedIn
