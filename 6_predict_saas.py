@@ -24,6 +24,7 @@ import requests
 import datetime as dt
 import pandas as pd
 from scipy import sparse
+from numpy import int32
 from bs4 import BeautifulSoup
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
@@ -152,6 +153,8 @@ def generate_forecast():
 
         # predict
         predicted = model.predict(df_all_data_csr)
+        predicted_int = predicted.tolist()
+        
         current_time = pd.Timestamp.now()
         hours = []
 
@@ -160,10 +163,10 @@ def generate_forecast():
             hour_rounded = hour.replace(minute=0, second=0, microsecond=0)
             hours.append(hour_rounded.strftime('%Y-%m-%d %H:%M'))
 
-        result[city] = dict(zip(hours, predicted))
+        result[city] = dict(zip(hours, predicted_int))
 
-    # Show result
-    print(result)
+    #json_data = json.dumps(result, indent=1)
+
     return result
 
     # ###     Save result
