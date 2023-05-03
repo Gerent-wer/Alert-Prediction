@@ -78,20 +78,19 @@ df_isw_short = data_preprocessed[['date', 'report_text_lemm', 'keywords', 'date_
 
 ### Predict
 
+# load necessary models
 tfidf = pickle.load(open("/home/ubuntu/Alert-Prediction/models/tfidf_transformer_v1.pkl", "rb"))
 cv = pickle.load(open("/home/ubuntu/Alert-Prediction/models/count_vectorizer_v1.pkl", "rb"))
 model = pickle.load(open("/home/ubuntu/Alert-Prediction/models/training_models/4_logreg_1.5f.pkl", "rb"))
 
-cities = ['Vinnytsia', 'Simferopol', 'Lutsk', 'Dnipro', 'Donetsk', 'Zhytomyr', 'Uzhgorod', 'Zaporozhye',
-          'Ivano-Frankivsk', 'Kyiv',
-          'Kropyvnytskyi', 'Luhansk', 'Lviv', 'Mykolaiv', 'Odesa', 'Poltava', 'Rivne', 'Sumy', 'Ternopil',
-          'Kharkiv', 'Kherson',
-          'Khmelnytskyi', 'Cherkasy', 'Chernivtsi', 'Chernihiv']
+cities = ['Kyiv', 'Kharkiv', 'Lviv', 'Odesa', 'Donetsk', 'Luhansk', 'Kherson', 'Simferopol', 'Mykolaiv', 'Lutsk',
+          'Chernihiv', 'Dnipro', 'Vinnytsia', 'Zhytomyr', 'Kropyvnytskyi', 'Poltava', 'Sumy', 'Rivne', 'Khmelnytskyi',
+          'Chernivtsi', 'Ternopil', 'Cherkasy', 'Uzhgorod', 'Zaporozhye', 'Ivano-Frankivsk']
 
 date = datetime.datetime.now(pytz.timezone('Europe/Kyiv'))
-current_time = str(pd.Timestamp.now().replace(microsecond=0))
-result = {"last_prediction_time": current_time}
+result = {}
 
+# for loop generate weather, merged it with isw vector and make a prediction for all regions in list above
 for city in cities:
 
     df_weather_final = get_weather.get_weather_for_12_hours(city, date)
@@ -118,17 +117,18 @@ for city in cities:
          'hour_cloudcover', 'hour_severerisk', 'region_id']]
 
     cv_vector_model = cv.transform(df_all['report_text_lemm'].values.astype('U'))
-    TF_IDF_MODEL = tfidf.transform(cv_vector_model)
+    tf_idf_model = tfidf.transform(cv_vector_model)
 
+    # merge final dataset with tfidf vector
     df_weather_matrix_v1_csr = scipy.sparse.csr_matrix(df_weather_matrix_v1)
-    df_all_data_csr = scipy.sparse.hstack((df_weather_matrix_v1_csr, TF_IDF_MODEL), format='csr')
+    df_all_data_csr = scipy.sparse.hstack((df_weather_matrix_v1_csr, tf_idf_model), format='csr')
 
     # predict
     predicted = model.predict(df_all_data_csr)
     predicted_list = predicted.tolist()
-    current_time = pd.Timestamp.now()
     hours = []
 
+    # store results in dictionary, after extract
     for i in range(12):
         hour = date + datetime.timedelta(hours=i)
         hour_rounded = hour.replace(minute=0, second=0, microsecond=0)
