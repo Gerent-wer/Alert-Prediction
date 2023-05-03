@@ -8,6 +8,13 @@ Our team is consisted of Voitishyn Mykyta, Ivashenko Dima, Zubko Stanislav and A
 
 Ready Python SaaS which is capable of generating probability of air alarm in all regions of Ukraine every hour for next 12 hours
 
+
+#### How to use
+
+6_hourly_alert_prediction_generator.py - our end-point solution
+
+This file is exectuted every hour and returns prediction of air alarms for next 12 hours
+
 #### Why
 
 
@@ -46,11 +53,7 @@ The model must be able to adapt to changing conditions and accurately predict th
 
     * Pushing, pulling, working on the same project with a team
     
-#### Project structure
 
-
-    
-    
 #### For any questions you can reash us via LinkedIn
 
 https://www.linkedin.com/in/mykyta-voitishyn-a11604229/
