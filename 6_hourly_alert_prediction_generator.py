@@ -1,18 +1,3 @@
-'''
-    Libraries for installation
-    pip install nltk
-    pip install scipy
-    pip install requests
-    pip install pandas
-    pip install scikit-learn
-    pip install bs4
-    pip install flask
-    pip install python-dotenv
-    pip install num2words
-    pip install lxml
-    pip install croniter
-'''
-
 # import libraries
 import datetime
 import pickle
@@ -21,20 +6,13 @@ import re
 import scipy
 import pytz
 import json
-import requests
-import croniter
-import time
-import subprocess
-import datetime as dt
 import pandas as pd
-from numpy import int32
 from scipy import sparse
 from bs4 import BeautifulSoup
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 from utils import get_weather
 from utils import text_processing
-from flask import Flask, jsonify, request
 
 nltk.download('stopwords')
 nltk.download('punkt')

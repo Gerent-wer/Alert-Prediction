@@ -11,8 +11,11 @@ from dotenv import load_dotenv
 load_dotenv()
 API_KEY = os.getenv('WEATHER_API_TOKEN')
 
-DIR_REGIONS = "../data/0_raw_other_data/regions.csv"
-SAVED_FORCASTS = "../data/1_weather_for_12_hours"
+# Folders path for server
+# DIR_REGIONS = "/home/ubuntu/Alert-Prediction/data/0_raw_other_data/regions.csv"
+# SAVED_FORCASTS = "/home/ubuntu/Alert-Prediction/data/1_weather_for_12_hours"
+DIR_REGIONS = "/data/0_raw_other_data/regions.csv"
+SAVED_FORCASTS = "/data/1_weather_for_12_hours"
 
 df_regions = pd.read_csv(DIR_REGIONS)
 
