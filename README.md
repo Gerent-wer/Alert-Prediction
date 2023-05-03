@@ -15,6 +15,9 @@ Ready Python SaaS which is capable of generating probability of air alarm in all
 
 This file is exectuted every hour and returns prediction of air alarms for next 12 hours
 
+Also our project structure is build on step-by-step principle.
+That means you should run scripts exactly one after another: during this process you will generate all necessary files and models for further purposes.
+
 #### Why
 
 
