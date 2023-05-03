@@ -50,13 +50,12 @@ def get_alert_predict():
 
 
 def get_last_predict_time():
-    # elapsed since EPOCH in float
     ti_m = os.path.getmtime("data/results/predict.json")
+    m_ti = time.ctime(ti_m)
+    t_obj = time.strptime(m_ti)
+    T_stamp = time.strftime("%Y-%m-%d %H:%M:%S", t_obj)
 
-    # Beatify time veiw
-    m_ti = time.strftime('%Y-%m-%d %H:%M')
-
-    return m_ti
+    return T_stamp
 
 
 class InvalidUsage(Exception):
