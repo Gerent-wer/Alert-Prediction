@@ -100,9 +100,9 @@ df_isw_short = data_preprocessed[['date', 'report_text_lemm', 'keywords', 'date_
 
 ### Predict
 
-tfidf = pickle.load(open("models/tfidf_transformer_v1.pkl", "rb"))
-cv = pickle.load(open("models/count_vectorizer_v1.pkl", "rb"))
-model = pickle.load(open("models/training_models/4_logreg_1.5f.pkl", "rb"))
+tfidf = pickle.load(open("/home/ubuntu/Alert-Prediction/models/tfidf_transformer_v1.pkl", "rb"))
+cv = pickle.load(open("/home/ubuntu/Alert-Prediction/models/count_vectorizer_v1.pkl", "rb"))
+model = pickle.load(open("/home/ubuntu/Alert-Prediction/models/training_models/4_logreg_1.5f.pkl", "rb"))
 
 cities = ['Vinnytsia', 'Simferopol', 'Lutsk', 'Dnipro', 'Donetsk', 'Zhytomyr', 'Uzhgorod', 'Zaporozhye',
           'Ivano-Frankivsk', 'Kyiv',
@@ -159,5 +159,5 @@ for city in cities:
     result[city] = dict(zip(hours, predicted_list))
 
 # Save json
-with open("data/results/predict.json", "w") as outfile:
+with open("/home/ubuntu/Alert-Prediction/data/results/predict.json", "w") as outfile:
     json.dump(result, outfile)
