@@ -35,7 +35,7 @@ The model must be able to adapt to changing conditions and accurately predict th
 
 #### How
 
-1. Python for Data science
+* Python for Data science
 
     * Natural language preprocessing
     * Exploratary data analysis
@@ -43,19 +43,19 @@ The model must be able to adapt to changing conditions and accurately predict th
     * Data Modeling
     * Machine lerning algorithms and predictions
     
-2. Web scraping and prepocessing    
+* Web scraping and prepocessing    
 
 
-3. SaaS implementation
+* SaaS implementation
 
     * Running Amazon EC2 server
     * Creating PostMan collections
 
-4. GIT 
+* GIT 
 
     * Pushing, pulling, working on the same project with a team
     
 
 #### For any questions you can reash us via LinkedIn
 
-https://www.linkedin.com/in/mykyta-voitishyn-a11604229/
+* https://www.linkedin.com/in/mykyta-voitishyn-a11604229/
